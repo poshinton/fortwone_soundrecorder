@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.micode.soundrecorder;
+package com.fortwone.fortwone_soundrecorder;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -29,10 +29,12 @@ public class SoundRecorderPreferenceActivity extends PreferenceActivity {
 
     private static final String ENABLE_SOUND_EFFECT = "pref_key_enable_sound_effect";
 
+    
     @Override
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.preferences);
+        
     }
 
     public static String getRecordType(Context context) {

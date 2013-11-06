@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.micode.soundrecorder;
+package com.fortwone.fortwone_soundrecorder;
 
 import android.app.KeyguardManager;
 import android.app.Notification;
@@ -186,12 +186,12 @@ public class RecorderService extends Service implements MediaRecorder.OnErrorLis
             mRecorder = new MediaRecorder();
             mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
             if (outputfileformat == MediaRecorder.OutputFormat.THREE_GPP) {
-                mRemainingTimeCalculator.setBitRate(SoundRecorder.BITRATE_3GPP);
+                mRemainingTimeCalculator.setBitRate(MainActivity.BITRATE_3GPP);
                 mRecorder.setAudioSamplingRate(highQuality ? 44100 : 22050);
                 mRecorder.setOutputFormat(outputfileformat);
                 mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
             } else {
-                mRemainingTimeCalculator.setBitRate(SoundRecorder.BITRATE_AMR);
+                mRemainingTimeCalculator.setBitRate(MainActivity.BITRATE_AMR);
                 mRecorder.setAudioSamplingRate(highQuality ? 16000 : 8000);
                 mRecorder.setOutputFormat(outputfileformat);
                 mRecorder.setAudioEncoder(highQuality ? MediaRecorder.AudioEncoder.AMR_WB
@@ -257,7 +257,7 @@ public class RecorderService extends Service implements MediaRecorder.OnErrorLis
         notification.flags = Notification.FLAG_ONGOING_EVENT;
         PendingIntent pendingIntent;
         pendingIntent = PendingIntent
-                .getActivity(this, 0, new Intent(this, SoundRecorder.class), 0);
+                .getActivity(this, 0, new Intent(this, MainActivity.class), 0);
 
         notification.setLatestEventInfo(this, getString(R.string.app_name),
                 getString(R.string.notification_recording), pendingIntent);
@@ -279,7 +279,7 @@ public class RecorderService extends Service implements MediaRecorder.OnErrorLis
 
         PendingIntent pendingIntent;
         pendingIntent = PendingIntent
-                .getActivity(this, 0, new Intent(this, SoundRecorder.class), 0);
+                .getActivity(this, 0, new Intent(this, MainActivity.class), 0);
 
         mLowStorageNotification.setLatestEventInfo(this, getString(R.string.app_name),
                 getString(R.string.notification_warning, minutes), pendingIntent);

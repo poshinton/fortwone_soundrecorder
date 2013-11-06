@@ -31,93 +31,30 @@
             android:id="@+id/time_calculator"
             android:layout_width="fill_parent"
             android:layout_height="0dip"
-            android:layout_weight="4"
+            android:layout_weight="2.25"
             android:gravity="center"
             android:orientation="horizontal"
             android:paddingTop="40dip" >
         </LinearLayout>
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="2.08" >
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/tape_bottom" />
-
-            <net.micode.soundrecorder.WheelImageView
-                android:id="@+id/wheel_left"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left|top"
-                android:layout_marginLeft="44dip"
-                android:layout_marginTop="60dip"
-                android:src="@drawable/wheel_left" />
-
-            <net.micode.soundrecorder.WheelImageView
-                android:id="@+id/wheel_right"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right|top"
-                android:layout_marginRight="45dip"
-                android:layout_marginTop="60dip"
-                android:src="@drawable/wheel_right" />
-
-            <net.micode.soundrecorder.WheelImageView
-                android:id="@+id/wheel_small_left"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left|bottom"
-                android:layout_marginBottom="15dip"
-                android:layout_marginLeft="30dip"
-                android:src="@drawable/wheel_small_left" />
-
-            <net.micode.soundrecorder.WheelImageView
-                android:id="@+id/wheel_small_right"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right|bottom"
-                android:layout_marginBottom="15dip"
-                android:layout_marginRight="30dip"
-                android:src="@drawable/wheel_small_right" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/tape_top" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left|top"
-                android:layout_marginLeft="55dip"
-                android:layout_marginTop="39dip"
-                android:orientation="vertical" >
-
-                <LinearLayout
-                    android:layout_width="0px"
-                    android:layout_height="0px"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true" />
-
-                <net.micode.soundrecorder.RecordNameEditText
+        
+        <com.fortwone.fortwone_soundrecorder.RecordNameEditText
                     android:id="@+id/file_name"
                     android:layout_width="220dip"
                     android:textColor="#ff555555"
-                    android:paddingLeft="40dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
                     android:layout_height="25dip"
                     android:background="#00000000"
                     android:selectAllOnFocus="true"
                     android:singleLine="true" />
-            </LinearLayout>
-        </FrameLayout>
+        
+		<ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/tape_bottom" />
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -128,9 +65,8 @@
 
             <LinearLayout
                 android:id="@+id/vumeter_layout"
-                android:layout_width="fill_parent"
-                android:layout_height="0dip"
-                android:layout_weight="1"
+                android:layout_width="269dp"
+                android:layout_height="64dp"
                 android:gravity="center"
                 android:orientation="horizontal" >
             </LinearLayout>
@@ -138,7 +74,7 @@
             <LinearLayout
                 android:id="@+id/play_seek_bar_layout"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="horizontal" >
 
@@ -157,7 +93,7 @@
                     android:layout_weight="1"
                     android:maxHeight="3dp"
                     android:background="@drawable/seekbarbg1"
-                    android:progressDrawable="@color/green"
+                    android:layout_marginTop="20dp"
                     android:thumb="@drawable/seekbar"
                     android:orientation="horizontal"
                     android:paddingLeft="10dip"

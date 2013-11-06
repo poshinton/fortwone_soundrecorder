@@ -14,7 +14,11 @@
  * limitations under the License.
  */
 
-package net.micode.soundrecorder;
+package com.fortwone.fortwone_soundrecorder;
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import android.content.Context;
 import android.graphics.Rect;
@@ -23,10 +27,6 @@ import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-
-import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 public class RecordNameEditText extends EditText {
 

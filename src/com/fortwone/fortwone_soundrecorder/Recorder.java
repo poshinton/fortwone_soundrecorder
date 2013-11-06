@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.micode.soundrecorder;
+package com.fortwone.fortwone_soundrecorder;
 
 import java.io.File;
 import java.io.IOException;
